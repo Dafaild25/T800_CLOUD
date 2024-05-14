@@ -61,9 +61,10 @@
     // llamar al elemento que haga una accion
     productForm.addEventListener("submit",async(e)=>{
         e.preventDefault();
-        await addDoc(collection(dbdavid,"producto"),{
+        await addDoc(collection(dbdavid,"productos"),{
             nombre:productForm.lbnombre.value,
             precio: productForm.lbprecio.value,
+
             
         });
         productForm.reset();
