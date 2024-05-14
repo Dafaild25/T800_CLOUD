@@ -29,7 +29,30 @@
             <input type="text" id="codigo" placeholder="codigo de producto">
             <button type="submit">AGREGAR</button>
         </form>
-    </main>
-    
+    </main>   
 </body>
+<script type="module">
+    // Import the functions you need from the SDKs you need
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js";
+    // para conectarse al base de datos de firebase
+    import{getFirestore, collection,addDoc,onSnapshot,deleteDoc,Doc}
+    from"https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js"
+    // TODO: Add SDKs for Firebase products that you want to use
+    // https://firebase.google.com/docs/web/setup#available-libraries
+  
+    // Your web app's Firebase configuration
+    const firebaseConfig = {
+      apiKey: "AIzaSyCUhULQjv2KDEWRI4KefyOjSkPYt0Lxp1Y",
+      authDomain: "cliente-c79f4.firebaseapp.com",
+      projectId: "cliente-c79f4",
+      storageBucket: "cliente-c79f4.appspot.com",
+      messagingSenderId: "468479738698",
+      appId: "1:468479738698:web:077179cde92dbcaeb977b3"
+    };
+  
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+  </script>
+
+
 </html>
