@@ -6,7 +6,7 @@
     <title>Productos</title>
 </head>
 <body>
-    <h1>FORMULARIO de los EPRODUCTOS</h1>
+    <h1>FORMULARIO de los PRODUCTOS</h1>
     <br>
     <hr>
     <main>
@@ -24,9 +24,9 @@
 
         <br>
         <form id="atrapaProductos">
-            <input type="text" id="lbnombre" placeholder="nombre del producto">
-            <input type="text" id="lbprecio" placeholder="precio del producto">
-            <input type="text" id="lbcodigo" placeholder="codigo de producto">
+            <input type="text" id="nombre" placeholder="nombre del producto">
+            <input type="text" id="precio" placeholder="precio del producto">
+            <input type="text" id="codigo" placeholder="codigo de producto">
             <button type="submit">AGREGAR</button>
         </form>
     </main>   
@@ -57,9 +57,9 @@
     nombre.addEventListener("submit", async(e)=>{
         e.preventDefault();
         await addDoc(collection(dbdavid,"productos"),{
-            nombre: articulos.lbnombre.value,
-            codigo: articulos.lbcodigo.value,
-            precio: articulos.lbprecio.value
+            nombre: articulos.nombre.value,
+            codigo: articulos.codigo.value,
+            precio: articulos.precio.value
         });
         articulos.reset();
     });
